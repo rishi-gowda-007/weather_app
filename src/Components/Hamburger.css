@@ -1,0 +1,37 @@
+#nav_anchors_panel_hamburger{
+    background-color:#48484A;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    height:100vh;
+    width:100%;
+    z-index: 2;
+    position:absolute;
+    top: 0;
+  }
+  #hamburger_close{
+    height: 2vw;
+    width:10vw;
+    background-color:red;
+    border:none;
+    border-radius:15px;
+    color:white;
+    font-size:'1vw'
+  }
+
+
+  @media (min-width:600px) and (max-width:1000px){
+      #hamburger_close{
+        height: 3vw;
+        width:15vw;
+        font-size:'2vw'
+      }
+}
+
+@media (max-width:600px){
+    #hamburger_close{
+        height: 5vw;
+        width:20vw;
+        font-size:'3vw'
+    }
+}

@@ -1,0 +1,52 @@
+#herosection_main{
+    width: 100%;
+    height: 20vw;
+    background-image: url('https://openweathermap.org/themes/openweathermap/assets/img/autumn_banner_main_page.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+#herosection_main_h1{
+    font-size: 3vw;
+    display: inline-block;
+    color: rgba(173, 1, 50,0.8);
+    margin-left: 10vw;
+}
+#herosection_main_h2{
+    font-size: 2vw;
+    color: white;
+    display: inline-block;
+    margin-left: 10vw;
+}
+
+@media (min-width:600px) and (max-width:1000px){
+    #herosection_main{
+        width: 100%;
+        height: 30vw;
+    }
+    #herosection_main_h1{
+        font-size: 4vw;
+        margin-left: 10vw;
+    }
+    #herosection_main_h2{
+        font-size: 3vw;
+        margin-left: 10vw;
+    }
+}
+
+@media (max-width:600px){
+    #herosection_main{
+        width: 100%;
+        height: 40vw;
+    }
+    #herosection_main_h1{
+        font-size: 5vw;
+        margin-left: 10vw;
+    }
+    #herosection_main_h2{
+        font-size: 4vw;
+        margin-left: 10vw;
+    }
+}

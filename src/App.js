@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Nav from "./Components/nav";
+import Herosection from "./Components/herosection";
+import Search_bar from "./Components/search_bar";
+import Weather_result from "./Components/Weather_result";
+import Hamburger from "./Components/Hamburger";
+import React,{ useState } from "react";
 function App() {
+  const [Result,setResult] = useState();
+  const [ham,setHam] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav ham={ham} setHam={setHam}></Nav>
+      <Herosection></Herosection>
+      <Search_bar setResult={setResult}/>
+      <Weather_result result={Result} />
+      <Hamburger ham={ham} setHam={setHam}></Hamburger>
     </div>
   );
 }

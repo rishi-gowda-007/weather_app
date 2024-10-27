@@ -1,0 +1,120 @@
+#nav_main{
+    width: 100%;
+    height: 4vw;
+    background-color: #48484A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+#navimg{
+    height: 3vw;
+    width: 7vw;
+    background-image: url('https://openweathermap.org/themes/openweather_b2b/assets/img/logo_white_cropped.png');
+    background-size: cover;
+    margin-left: 1vw;
+}
+
+#nav_anchors_panel{
+    height: 100%;
+    width: 75%;
+    margin-right: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav_anchor{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1vw;
+    transition: all 0.2 ease-in;
+}
+
+#nav_contactus{
+    height: 2vw;
+    width: 7vw;
+    background-color: rgba(245, 245, 246, 0.5);
+    color: white;
+    border-radius: 20px;
+    font-size: 1.1vw;
+    transition: all 0.2 ease-in;
+    border: 0;
+}
+#nav_hamburger{
+    height: 2vw;
+    width: 2vw;
+    background-color: rgba(245, 245, 246, 0.5);
+    color: white;
+    border-radius: 20px;
+    margin-right: 1vw;
+    border: 0;
+    display:none;
+    font-size: 1vw;
+}
+
+.nav_anchor:hover{
+    border-bottom: 2px solid white;
+}
+#nav_contactus:hover{
+    background-color: black;
+}
+
+@media (max-width: 1100px) {
+    #nav_anchors_panel {
+        display: none;
+    }
+
+    #nav_hamburger {
+        display: inline-block;
+    }
+}
+
+@media (min-width:600px) and (max-width:1000px){
+    #nav_main{
+        width: 100%;
+        height: 6vw;
+    }
+    #navimg{
+        height: 5vw;
+        width: 12vw;
+    }
+    #nav_hamburger{
+        height: 4vw;
+        width: 4vw;
+        font-size: 2vw;
+    }
+    .nav_anchor{
+        font-size: 2vw;
+    }
+    #nav_contactus{
+        height: 3vw;
+        width: 15vw;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:600px){
+    #nav_main{
+        width: 100%;
+        height: 10vw;
+    }
+    #navimg{
+        height: 7vw;
+        width: 17vw;
+    }
+    #nav_hamburger{
+        height: 6vw;
+        width: 6vw;
+        font-size: 3vw;
+    }
+    .nav_anchor{
+        font-size: 3vw;
+    }
+    #nav_contactus{
+        height: 5vw;
+        width: 20vw;
+        font-size: 3vw;
+    }
+}
+
