@@ -3,28 +3,25 @@ import './search_bar.css'
 import { useState } from 'react';
 function Search_bar({setResult}) {
   const [City,setCity]=useState();
-  const getData=async(city)=>{
-  const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${city}&days=3`;
-  const options = {
-	    method: 'GET',
-	    headers: {
-		              'x-rapidapi-key': '833e0bc70amsh6783c149319163fp12cadcjsna3fc922c6267',
-		              'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com'
-	    }
+  const getData = async (city) => { 
+    const url = `https://open-weather13.p.rapidapi.com/city/${city}/EN`; // Complete URL 
+    const options = { 
+      method: 'GET', 
+      headers: { 
+        'x-rapidapi-key': '833e0bc70amsh6783c149319163fp12cadcjsna3fc922c6267', 
+        'x-rapidapi-host': 'open-weather13.p.rapidapi.com' 
+      } 
+    }; 
+    try { 
+      const response = await fetch(url, options); 
+      const result = await response.json(); 
+      setResult(result); 
+      console.log(result); 
+    } 
+    catch (error) { 
+      console.error(error); 
+    } 
   };
-
-  try 
-  {
-	  const response = await fetch(url, options);
-	  const result = await response.json();
-    setResult(result);
-	  console.log(result);
-  } 
-  catch (error) 
-  {
-	  console.error(error);
-  }
-}
   return (
     <div id='search_bar_main'>
         <div id='search_bar_combo'>
